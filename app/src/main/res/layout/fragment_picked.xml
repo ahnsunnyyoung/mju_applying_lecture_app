@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.picked.PickedFragment"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_700"
+        android:gravity="center|bottom"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="@dimen/top_title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/title_picked"/>
+
+    </LinearLayout>
+
+<!--    서버시간 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="명지대 서버시간"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp" />
+
+            <TextClock
+                android:id="@+id/simpleTextClock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <!--        책가방 정보 카드뷰-->
+        <GridLayout
+            android:id="@+id/item_root"
+            android:layout_marginHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:background="@drawable/rounded_shadow_layout"
+            android:backgroundTint="@color/teal_500"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/lectureInfoCardViewTitle"
+                android:text="총 책가방 교과목수"
+                android:textColor="@color/purple_700"/>
+
+            <TextView
+                android:id="@+id/picked_total_lectures_num"
+                style="@style/lectureInfoCardViewContent"
+                android:textColor="@color/purple_700"/>
+
+            <TextView
+                style="@style/lectureInfoCardViewTitle"
+                android:text="총 책가방 학점수"
+                android:textColor="@color/purple_700" />
+
+            <TextView
+                android:id="@+id/picked_total_lectures_credits"
+                style="@style/lectureInfoCardViewContent"
+                android:textColor="@color/purple_700" />
+
+        </GridLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_200"
+            android:textSize="13sp"
+            android:layout_gravity="right"
+            android:layout_margin="3dp"
+            android:minHeight="30dp"
+            android:minWidth="50dp"
+            android:text="순서변경" />
+
+        <!--        책가방 강의 리스트 뷰-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/picked_lectures_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="10dp"/>
+
+        <!--        신청한 강의 정보 카드뷰-->
+        <com.skydoves.expandablelayout.ExpandableLayout
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/expandable_applied_lecture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandable_duration="300"
+            app:expandable_isExpanded="false"
+            app:expandable_parentLayout="@layout/applied_lectures_layout_parent"
+            app:expandable_secondLayout="@layout/applied_lectures_layout_second"
+            app:expandable_showSpinner="true"
+            app:expandable_spinner="@drawable/ic_arrow_down"
+            app:expandable_spinner_animate="true"
+            app:expandable_spinner_margin="14dp"
+            app:expandable_spinner_gravity="end"
+            app:expandable_spinner_size="32dp"
+            app:expandable_spinner_color="@color/teal_500" />
+
+    </LinearLayout>
+</LinearLayout>

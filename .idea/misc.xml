@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/user/.gradle/caches/transforms-3/10ad44deb0ddc19aeb6104e0671f231b/transformed/expandablelayout-1.0.7/res/drawable/ic_arrow_down.xml" value="0.1" />
+        <entry key="..\:/Users/user/.gradle/caches/transforms-3/e2c4f96fd7896544c9c84213f3dad3e4/transformed/appcompat-resources-1.4.1/res/drawable/abc_vector_test.xml" value="0.186" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable-v24/planner_icon_fit.xml" value="0.218" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/cart_icon_fit.xml" value="0.139" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/lock_icon_fit.xml" value="0.232" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/mju_logo_fit.xml" value="0.108" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/notice_circle_background.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/notice_icon_fit.xml" value="0.1725" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/rounded_edittext.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/rounded_shadow_layout.xml" value="0.261" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/thumb.xml" value="0.193" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/thumb_selector.xml" value="0.193" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/toggle_selector.xml" value="0.1205" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/track.xml" value="0.193" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/track_selector.xml" value="0.193" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/user_icon.xml" value="0.249" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/drawable/user_icon_fit.xml" value="0.232" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/activity_calendar.xml" value="0.3070652173913043" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/activity_join.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/activity_lectures_detail.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/activity_login.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/applied_lectures_layout_parent.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/applied_lectures_layout_second.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/applied_lectures_view.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/custom_action_item_layout.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/fragment_calendar.xml" value="0.3070652173913043" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/fragment_community.xml" value="0.16" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/fragment_info.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/fragment_lectures.xml" value="0.19672131147540983" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/fragment_notifications.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/fragment_picked.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/layout_parent.xml" value="0.2703125" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/layout_second.xml" value="0.2703125" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_category_view.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_details_toolbar.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_details_view.xml" value="0.3020833333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_major_type_view.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_uni_layout_parent.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_uni_layout_second.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/lectures_uni_type_view.xml" value="0.29010416666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/picked_lectures_view.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/toolbar.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/layout/user_info.xml" value="0.3072916666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18489583333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/menu/lectures_details_menu.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1725" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

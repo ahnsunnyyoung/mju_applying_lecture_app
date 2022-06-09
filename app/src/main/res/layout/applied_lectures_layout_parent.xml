@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:background="@drawable/rounded_shadow_layout"
+    android:backgroundTint="@color/purple_200"
+    android:padding="10dp">
+        <TextView
+            style="@style/lectureInfoCardViewTitle"
+            android:text="수강가능 학점" />
+
+        <TextView
+            android:id="@+id/available_apply_credits"
+            style="@style/lectureInfoCardViewContent"
+            android:text="17학점" />
+
+        <TextView
+            style="@style/lectureInfoCardViewTitle"
+            android:text="총 수강신청 교과목수" />
+
+        <TextView
+            android:id="@+id/applied_total_lec_num"
+            style="@style/lectureInfoCardViewContent"
+            android:text="0과목" />
+
+
+        <TextView
+            style="@style/lectureInfoCardViewTitle"
+            android:text="총 수강신청 학점수" />
+
+        <TextView
+            android:id="@+id/applied_total_lec_credits"
+            style="@style/lectureInfoCardViewContent"
+            android:text="0학점" />
+</GridLayout>

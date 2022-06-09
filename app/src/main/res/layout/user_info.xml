@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/info_user"
+        android:text="@string/info_user"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/user_icon_fit"
+        android:drawableTint="@color/white"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="17sp"
+        android:layout_weight="1"
+        android:gravity="left|center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="0dp"
+        android:layout_marginHorizontal="0dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/stu_name"
+            android:text="안선영"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"/>
+        <TextView
+            android:id="@+id/stu_campus"
+            android:text="서울캠퍼스"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginHorizontal="20dp"/>
+        <TextView
+            android:id="@+id/stu_time"
+            android:text="주간"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="0dp"
+        android:layout_marginHorizontal="0dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/stu_major"
+            android:text="융합소프트웨어학부"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/stu_grade"
+            android:text="4학년"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginVertical="0dp"
+        android:layout_marginHorizontal="0dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/stu_englishLvl"
+            android:text="영어 이수"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"/>
+        <TextView
+            android:id="@+id/stu_englishConLvl"
+            android:text="영어회화 이수"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginHorizontal="20dp"/>
+        <TextView
+            android:id="@+id/stu_mathLvl"
+            android:text="미적분학 A1"
+            style="@style/infoUserDetails"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

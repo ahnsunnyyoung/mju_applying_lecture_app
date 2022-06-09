@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">수강신청</string>
+    <string name="title_info">정보</string>
+    <string name="title_lectures">강의목록</string>
+    <string name="title_picked">책가방</string>
+    <string name="title_community">커뮤니티</string>
+
+    <string name="main_mju">명지대학교</string>
+    <string name="login_id">아이디</string>
+    <string name="login_password">비밀번호</string>
+    <string name="login_info">- 아이디는 학번입니다.\n- 웹수강신청과 동시 사용이 불가능합니다.\n&#160; &#160; (멀티로그온 불가)</string>
+
+    <string name="info_statement">명지대학교는\n000 학생의\n올클을 기원합니다!</string>
+    <string name="info_schedule">2022년 1학기 수강신청</string>
+    <string name="info_schedule_detail">지금은 미리담기 기간입니다</string>
+    <string name="info_schedule_btn">일정캘린더</string>
+    <string name="info_user">My info</string>
+    <string name="info_notice">Notice</string>
+
+
+    <string name="lectures_apply">신청</string>
+    <string name="lectures_pick">담기</string>
+    <string name="lectures_cancel">취소</string>
+    <string name="no_lec">강의가 없습니다.</string>
+
+    <string name="community_live_title">실시간 커뮤니티</string>
+    <string name="community_tips_title">꿀팁 공유</string>
+
+</resources>
