@@ -97,7 +97,6 @@ class LoginActivity : AppCompatActivity() {
         for (i in userList.indices) {
             // 유저가 입력한 id, pw값과 쉐어드로 불러온 id, pw값 비교
             if(id == userList[i].id && pwd == userList[i].pwd){
-                Log.d(TAG, userList[i].name)
                 return arrayOf(true,userList[i])
             }
         }

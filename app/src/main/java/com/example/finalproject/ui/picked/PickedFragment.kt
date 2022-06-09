@@ -1,15 +1,18 @@
 package com.example.finalproject.ui.picked
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.LoginActivity.Companion.currentUser
 import com.example.finalproject.R
+import com.example.finalproject.data.Lecture
 import com.example.finalproject.databinding.FragmentPickedBinding
 
 class PickedFragment : Fragment() {
@@ -66,6 +69,7 @@ class PickedFragment : Fragment() {
         return root
     }
 
+    @SuppressLint("SetTextI18n")
     fun refreshPickedLecturesData(){
         picked_total_lec_num = 0
         picked_total_lec_credits = 0
@@ -79,8 +83,11 @@ class PickedFragment : Fragment() {
     }
 
     fun refreshAppliedLecturesData(){
+
         if (currentUser.appliedList.size==0){
             binding.expandableAppliedLecture.secondLayout.findViewById<TextView>(R.id.no_lec_text).visibility = View.VISIBLE
+        }else{
+            binding.expandableAppliedLecture.secondLayout.findViewById<TextView>(R.id.no_lec_text).visibility = View.GONE
         }
         binding.expandableAppliedLecture.findViewById<TextView>(R.id.available_apply_credits).text = "${available_apply_credits}학점"
         applied_total_lec_num = 0
@@ -93,6 +100,14 @@ class PickedFragment : Fragment() {
         binding.expandableAppliedLecture.findViewById<TextView>(R.id.applied_total_lec_num).text = "${applied_total_lec_num}과목"
         binding.expandableAppliedLecture.findViewById<TextView>(R.id.applied_total_lec_credits).text = "${applied_total_lec_credits}학점"
 
+    }
+
+    fun toastAppliedLectures(name: String){
+        Toast.makeText(activity,"$name 강의가 신청되었습니다!", Toast.LENGTH_SHORT).show()
+    }
+
+    fun toastCanceledLectures(name: String){
+        Toast.makeText(activity,"$name 강의가 취소되었습니다.", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {

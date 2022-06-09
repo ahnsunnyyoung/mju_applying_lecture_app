@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             )
         )
         navView.setupWithNavController(navController)
-        Log.d("전환", currentFragmentId.toString())
         navView.selectedItemId = currentFragmentId
 
     }

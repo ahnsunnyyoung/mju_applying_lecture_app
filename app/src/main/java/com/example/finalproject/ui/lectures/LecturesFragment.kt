@@ -36,7 +36,6 @@ class LecturesFragment : Fragment() {
             binding.cartBtn.visibility = View.GONE
             binding.pickedLecturesNumNotify.visibility = View.GONE
         }else{
-            Log.d("강의담기",currentUser.pickedList.size.toString())
             binding.cartBtn.visibility = View.VISIBLE
             binding.pickedLecturesNumNotify.visibility = View.VISIBLE
             binding.pickedLecturesNumNotify.text =  currentUser.pickedList.size.toString()

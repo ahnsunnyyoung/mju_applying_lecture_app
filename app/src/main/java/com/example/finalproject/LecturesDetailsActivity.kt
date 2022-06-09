@@ -2,15 +2,18 @@ package com.example.finalproject
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.LoginActivity.Companion.currentUser
 import com.example.finalproject.LoginActivity.Companion.lectureDataArray
+import com.example.finalproject.data.Lecture
 import com.example.finalproject.databinding.ActivityLecturesDetailBinding
 import com.example.finalproject.ui.picked.PickedFragment
 
@@ -30,16 +33,16 @@ class LecturesDetailsActivity : AppCompatActivity() {
         binding = ActivityLecturesDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var uniType = intent.getIntExtra("UniType",0)
-        var majorType = intent.getIntExtra("MajorType",0)
+        val uniType = intent.getIntExtra("UniType",0)
+        val majorType = intent.getIntExtra("MajorType",0)
 
-        var lectureArray = lectureDataArray[uniType][majorType]
+        val lectureArray = lectureDataArray[uniType][majorType]
 
 
         //         수강신청 카드뷰 내용 초기화
         refreshAppliedLecturesData()
 
-        var appliedExpandableView = binding.expandableAppliedLecture
+        val appliedExpandableView = binding.expandableAppliedLecture
 
         if (LoginActivity.currentUser.appliedList.size==0){
             appliedExpandableView.secondLayout.findViewById<TextView>(R.id.no_lec_text).visibility = View.VISIBLE
@@ -67,13 +70,15 @@ class LecturesDetailsActivity : AppCompatActivity() {
     }
 
     fun refreshAppliedLecturesData(){
-        if (LoginActivity.currentUser.appliedList.size==0){
+        if (currentUser.appliedList.size==0){
             binding.expandableAppliedLecture.secondLayout.findViewById<TextView>(R.id.no_lec_text).visibility = View.VISIBLE
+        } else{
+            binding.expandableAppliedLecture.secondLayout.findViewById<TextView>(R.id.no_lec_text).visibility = View.GONE
         }
         binding.expandableAppliedLecture.findViewById<TextView>(R.id.available_apply_credits).text = "${available_apply_credits}학점"
         applied_total_lec_num = 0
         applied_total_lec_credits = 0
-        for (lec in LoginActivity.currentUser.appliedList) {
+        for (lec in currentUser.appliedList) {
             applied_total_lec_num ++
             applied_total_lec_credits += lec.credits
         }
@@ -107,16 +112,28 @@ class LecturesDetailsActivity : AppCompatActivity() {
     fun setupBadge() {
         mCartItemCount = currentUser.pickedList.size
         if (textCartItemCount != null) {
-            if (mCartItemCount === 0) {
-                if (textCartItemCount!!.visibility !== View.GONE) {
+            if (mCartItemCount == 0) {
+                if (textCartItemCount!!.visibility != View.GONE) {
                     textCartItemCount!!.visibility = View.GONE
                 }
             } else {
                 textCartItemCount!!.text = mCartItemCount.toString()
-                if (textCartItemCount!!.visibility !== View.VISIBLE) {
+                if (textCartItemCount!!.visibility != View.VISIBLE) {
                     textCartItemCount!!.visibility = View.VISIBLE
                 }
             }
         }
+    }
+
+    fun toastAppliedLectures(name: String){
+        Toast.makeText(this,"$name 강의가 신청되었습니다!", Toast.LENGTH_SHORT).show()
+    }
+
+    fun toastCanceledLectures(name: String){
+        Toast.makeText(this,"$name 강의가 취소되었습니다.", Toast.LENGTH_SHORT).show()
+    }
+
+    fun toastPickedLectures(name: String){
+        Toast.makeText(this,"$name 강의를 책가방에 담았습니다.", Toast.LENGTH_SHORT).show()
     }
 }

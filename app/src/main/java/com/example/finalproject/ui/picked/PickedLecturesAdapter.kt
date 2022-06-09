@@ -1,5 +1,6 @@
 package com.example.finalproject.ui.picked
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -27,6 +28,7 @@ class PickedLecturesAdapter(
         return MyViewHolder(PickedLecturesViewBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
+    @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val binding = (holder as MyViewHolder).binding
         val lecture = dataSet[position]
@@ -39,19 +41,20 @@ class PickedLecturesAdapter(
             "신청 : ${lecture.appliedStuNum}  제한 : ${lecture.limitStuNum}  담기 : ${lecture.pickedStuNum}  경쟁률 : ${
                 round(competRate * 100) / 100
             }"
-        binding.lecContentsThirdLine.text = "${lecture.timeInfo}"
+        binding.lecContentsThirdLine.text = lecture.timeInfo
 
         binding.removePickedLecture.setOnClickListener {
             dataSet.removeAt(position)
             this.notifyDataSetChanged()
             pickedFragment.refreshPickedLecturesData()
-            true
+            pickedFragment.toastCanceledLectures(lecture.name)
         }
 
         binding.applyPickedLecture.setOnClickListener {
             currentUser.appliedList.add(dataSet[position])
             appliedLecturesAdapter.notifyDataSetChanged()
             pickedFragment.refreshAppliedLecturesData()
+            pickedFragment.toastAppliedLectures(lecture.name)
         }
     }
 }

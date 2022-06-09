@@ -1,7 +1,9 @@
 package com.example.finalproject
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.data.Lecture
 import com.example.finalproject.databinding.AppliedLecturesViewBinding
@@ -21,6 +23,7 @@ class LecturesDetailsAppliedLecturesAdapter(
         return MyViewHolder(AppliedLecturesViewBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
+    @SuppressLint("NotifyDataSetChanged", "SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val binding = (holder as MyViewHolder).binding
         val lecture = dataSet[position]
@@ -33,14 +36,14 @@ class LecturesDetailsAppliedLecturesAdapter(
             "신청 : ${lecture.appliedStuNum}  제한 : ${lecture.limitStuNum}  담기 : ${lecture.pickedStuNum}  경쟁률 : ${
                 round(competRate * 100) / 100
             }"
-        binding.lecContentsThirdLine.text = "${lecture.timeInfo}"
+        binding.lecContentsThirdLine.text = lecture.timeInfo
 
 
         binding.cancelPickedLecture.setOnClickListener {
             dataSet.removeAt(position)
             this.notifyDataSetChanged()
             activity.refreshAppliedLecturesData()
-            true
+            activity.toastCanceledLectures(lecture.name)
         }
 
     }

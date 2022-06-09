@@ -29,7 +29,6 @@ class LecturesMajorTypeAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val binding = (holder as MyViewHolder).binding
 
-        Log.d("major",position.toString())
         binding.itemText.text = dataSet[position]
 
         binding.itemText.setOnClickListener {

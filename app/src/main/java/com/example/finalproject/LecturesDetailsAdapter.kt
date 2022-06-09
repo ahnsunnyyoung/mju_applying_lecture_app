@@ -1,5 +1,7 @@
 package com.example.finalproject
 
+import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +32,7 @@ class LecturesDetailsAdapter(
         )
     }
 
+    @SuppressLint("NotifyDataSetChanged", "SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val binding = (holder as MyViewHolder).binding
         val lecture = dataSet[position]
@@ -43,12 +46,14 @@ class LecturesDetailsAdapter(
         binding.pickLecture.setOnClickListener {
             LoginActivity.currentUser.pickedList.add(dataSet[position])
             lecturesDetailsActivity.setupBadge()
+            lecturesDetailsActivity.toastPickedLectures(dataSet[position].name)
         }
 
         binding.applyLecture.setOnClickListener {
             LoginActivity.currentUser.appliedList.add(dataSet[position])
             appliedLecturesAdapter.notifyDataSetChanged()
             lecturesDetailsActivity.refreshAppliedLecturesData()
+            lecturesDetailsActivity.toastAppliedLectures(dataSet[position].name)
         }
 
     }

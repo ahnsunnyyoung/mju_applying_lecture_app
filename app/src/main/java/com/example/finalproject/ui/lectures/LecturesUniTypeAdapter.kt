@@ -32,7 +32,6 @@ class LecturesUniTypeAdapter(private val dataSet: Array<String>, mContext: Conte
             if (binding.expandableUniType.isExpanded){
                 binding.expandableUniType.collapse()
             } else{
-                Log.d("uni expanded", Lecture().majorTypeArray[position][0])
                 binding.expandableUniType.expand()
                 }
         }
