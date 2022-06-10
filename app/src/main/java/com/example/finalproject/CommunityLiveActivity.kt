@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,5 +20,10 @@ class CommunityLiveActivity : AppCompatActivity() {
         val liveCommunityPostAdapter = LiveCommunityPostAdapter(LoginActivity.liveCommunityPostDataArray)
         binding.communityLiveRecyclerview.layoutManager = LinearLayoutManager(this)
         binding.communityLiveRecyclerview.adapter = liveCommunityPostAdapter
+
+        binding.communityLivePostBtn.setOnClickListener {
+            val intent: Intent = Intent(this, CommunityLivePostActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

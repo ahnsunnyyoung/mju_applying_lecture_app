@@ -10,9 +10,13 @@ import com.example.finalproject.R
 import com.example.finalproject.data.Lecture
 import com.example.finalproject.databinding.LecturesUniTypeViewBinding
 
-class LecturesUniTypeAdapter(private val dataSet: Array<String>, mContext: Context?): RecyclerView.Adapter<LecturesUniTypeAdapter.MyViewHolder>() {
+class LecturesUniTypeAdapter(
+    private val dataSet: Array<String>,
+    val mContext: Context?,
+    val campusType: Int
+): RecyclerView.Adapter<LecturesUniTypeAdapter.MyViewHolder>() {
     var count:Int = 0
-    val mContext = mContext
+
     class MyViewHolder(val binding: LecturesUniTypeViewBinding) : RecyclerView.ViewHolder(binding.root)
     override fun getItemCount() = dataSet.size
 
@@ -25,7 +29,7 @@ class LecturesUniTypeAdapter(private val dataSet: Array<String>, mContext: Conte
         val binding = (holder as MyViewHolder).binding
         binding.expandableUniType.parentLayout.findViewById<TextView>(R.id.lectures_category_text).text = dataSet[position]
         val secondBinding = binding.expandableUniType.secondLayout
-        val adapter = LecturesMajorTypeAdapter(Lecture().majorTypeArray[position],mContext,position)
+        val adapter = LecturesMajorTypeAdapter(Lecture().majorTypeArray[campusType][position],mContext,position)
         secondBinding.findViewById<RecyclerView>(R.id.lectures_major_type_recyclerview).adapter = adapter
 
         binding.expandableUniType.parentLayout.setOnClickListener {

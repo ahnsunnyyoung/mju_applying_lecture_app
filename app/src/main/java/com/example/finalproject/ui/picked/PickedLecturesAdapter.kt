@@ -36,7 +36,7 @@ class PickedLecturesAdapter(
         binding.lecName.text = lecture.name
         val competRate: Double = lecture.pickedStuNum.toDouble() / lecture.limitStuNum.toDouble()
         binding.lecContentsFirstLine.text =
-            "${lecture.stuGradeArray[lecture.stuGrade]} ${lecture.majorTypeArray[lecture.uniType][lecture.majorType]} ${lecture.credits}학점 ${lecture.hours}시간 ${lecture.profName}"
+            "${lecture.stuGradeArray[lecture.stuGrade]} ${lecture.majorTypeArray[lecture.campusType][lecture.uniType][lecture.majorType]} ${lecture.credits}학점 ${lecture.hours}시간 ${lecture.profName}"
         binding.lecContentsSecondLine.text =
             "신청 : ${lecture.appliedStuNum}  제한 : ${lecture.limitStuNum}  담기 : ${lecture.pickedStuNum}  경쟁률 : ${
                 round(competRate * 100) / 100

@@ -14,6 +14,8 @@ import com.example.finalproject.R
 import com.example.finalproject.data.Lecture
 import com.example.finalproject.databinding.FragmentLecturesBinding
 import com.example.finalproject.ui.picked.PickedFragment
+import com.github.angads25.toggle.interfaces.OnToggledListener
+
 
 class LecturesFragment : Fragment() {
 
@@ -33,7 +35,6 @@ class LecturesFragment : Fragment() {
         val root: View = binding.root
 
         if(currentUser.pickedList.size===0) {
-            binding.cartBtn.visibility = View.GONE
             binding.pickedLecturesNumNotify.visibility = View.GONE
         }else{
             binding.cartBtn.visibility = View.VISIBLE
@@ -41,9 +42,51 @@ class LecturesFragment : Fragment() {
             binding.pickedLecturesNumNotify.text =  currentUser.pickedList.size.toString()
         }
 
-        val lecturesUniTypeAdapter = LecturesUniTypeAdapter(Lecture().uniTypeArray,context)
+        var campusType = 0
+
+        var lecturesUniTypeAdapter = LecturesUniTypeAdapter(Lecture().uniTypeArray[campusType],context,campusType)
         binding.lecturesUniTypeRecyclerview.layoutManager = LinearLayoutManager(context)
         binding.lecturesUniTypeRecyclerview.adapter = lecturesUniTypeAdapter
+
+        binding.campusLabel.setOnToggledListener(OnToggledListener { labeledSwitch, isOn ->
+            if (isOn){
+                if (binding.campusTimeLabel.isOn){
+                    campusType = 0
+                }else{
+                    campusType = 1
+                }
+            }else{
+                if (binding.campusTimeLabel.isOn){
+                    campusType = 2
+                }else{
+                    campusType = 3
+                }
+            }
+            lecturesUniTypeAdapter = LecturesUniTypeAdapter(Lecture().uniTypeArray[campusType],context,campusType)
+            binding.lecturesUniTypeRecyclerview.layoutManager = LinearLayoutManager(context)
+            binding.lecturesUniTypeRecyclerview.adapter = lecturesUniTypeAdapter
+        })
+
+        binding.campusTimeLabel.setOnToggledListener(OnToggledListener { labeledSwitch, isOn ->
+            if (isOn){
+                if (binding.campusLabel.isOn){
+                    campusType = 0
+                }else{
+                    campusType = 2
+                }
+            }else{
+                if (binding.campusLabel.isOn){
+                    campusType = 1
+                }else{
+                    campusType = 3
+                }
+            }
+            lecturesUniTypeAdapter = LecturesUniTypeAdapter(Lecture().uniTypeArray[campusType],context,campusType)
+            binding.lecturesUniTypeRecyclerview.layoutManager = LinearLayoutManager(context)
+            binding.lecturesUniTypeRecyclerview.adapter = lecturesUniTypeAdapter
+        })
+
+
         val activity = (activity as MainActivity)
 
         binding.cartBtn.setOnClickListener {
