@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.info.InfoFragment"
     android:orientation="vertical"
+    android:background="@color/white"
     android:layout_marginBottom="50dp">
 
     <LinearLayout

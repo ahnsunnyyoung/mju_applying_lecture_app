@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:background="@drawable/rounded_shadow_layout"
-    android:backgroundTint="@color/teal_500"
+    android:backgroundTint="@color/teal_200"
     android:outlineProvider="paddedBounds"
     android:orientation="horizontal">
 

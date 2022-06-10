@@ -8,8 +8,10 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.finalproject.data.Lecture
+import com.example.finalproject.data.Post
 import com.example.finalproject.data.User
 import com.example.finalproject.databinding.ActivityLoginBinding
+import java.sql.Timestamp
 
 class LoginActivity : AppCompatActivity() {
 
@@ -38,6 +40,15 @@ class LoginActivity : AppCompatActivity() {
             arrayOf(arrayOf(),arrayOf()), //사회과학대학
             arrayOf(arrayOf()), //법과대학
             arrayOf(arrayOf(),arrayOf()) //경영대학
+        )
+
+        val liveCommunityPostDataArray:ArrayList<Post> = arrayListOf<Post>(
+            Post(0,"너무 떨린다","수강신청 다들 파이팅", Timestamp(System.currentTimeMillis()),true,0),
+            Post(1,"모컴 경쟁률 빡셀까?","모컴 곡 잡아야 하는데...", Timestamp(System.currentTimeMillis()),true,0),
+            Post(2,"곧이다 진짜 ;","ㅈㄱㄴ", Timestamp(System.currentTimeMillis()),true,1),
+            Post(3,"꿀팁 ㄹㅇ ㅋㅋ","수강신청 전엔 명상이지!", Timestamp(System.currentTimeMillis()),true,6),
+            Post(4,"배고프당","점심 뭐 먹지", Timestamp(System.currentTimeMillis()),true,5),
+            Post(5,"종강 언제 해","개강부터 해야 할 텐데", Timestamp(System.currentTimeMillis()),true,16),
         )
 
         var userArrayList: ArrayList<User> = arrayListOf<User>(

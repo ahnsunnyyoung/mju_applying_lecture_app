@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:id="@+id/item_root"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:padding="10dp"
-android:background="@drawable/rounded_shadow_layout"
-android:outlineProvider="paddedBounds"
-android:orientation="horizontal">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/rounded_shadow_layout"
+    android:backgroundTint="@color/teal_200"
+    android:outlineProvider="paddedBounds"
+    android:orientation="horizontal">
 
 <TextView
     android:id="@+id/lectures_category_text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:textSize="18sp"
-    android:textColor="@color/teal_500"
+    android:textColor="@color/white"
     android:text="교양필수"
     android:drawableLeft="@drawable/notice_icon_fit"
-    android:drawableTint="@color/teal_500"
+    android:drawableTint="@color/white"
     android:drawablePadding="10dp"/>
 
 </LinearLayout>

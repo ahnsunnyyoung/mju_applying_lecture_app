@@ -50,6 +50,19 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/menu/lectures_details_menu.xml" value="0.21458333333333332" />
         <entry key="..\:/Users/user/AndroidStudioProjects/finalProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1725" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/drawable/heart_filled_fit.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/drawable/heart_fit.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/drawable/rounded_post_card_view.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/activity_calendar.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/activity_community_live.xml" value="0.2" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/activity_community_live_post.xml" value="0.22010869565217392" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/applied_lectures_layout_second.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/fragment_community.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/fragment_lectures.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/lectures_details_view.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/lectures_uni_layout_parent.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/lectures_uni_layout_second.xml" value="0.34148550724637683" />
+        <entry key="..\:/Users/user/Desktop/mobile_computing_project/mju_applying_lecture_app/app/src/main/res/layout/live_community_post_view.xml" value="0.25" />
       </map>
     </option>
   </component>
