@@ -42,14 +42,16 @@ class LoginActivity : AppCompatActivity() {
             arrayOf(arrayOf(),arrayOf()) //경영대학
         )
 
-        val liveCommunityPostDataArray:ArrayList<Post> = arrayListOf<Post>(
-            Post(0,"너무 떨린다","수강신청 다들 파이팅", Timestamp(System.currentTimeMillis()),true,0),
-            Post(1,"모컴 경쟁률 빡셀까?","모컴 곡 잡아야 하는데...", Timestamp(System.currentTimeMillis()),true,0),
-            Post(2,"곧이다 진짜 ;","ㅈㄱㄴ", Timestamp(System.currentTimeMillis()),true,1),
-            Post(3,"꿀팁 ㄹㅇ ㅋㅋ","수강신청 전엔 명상이지!", Timestamp(System.currentTimeMillis()),true,6),
-            Post(4,"배고프당","점심 뭐 먹지", Timestamp(System.currentTimeMillis()),true,5),
-            Post(5,"종강 언제 해","개강부터 해야 할 텐데", Timestamp(System.currentTimeMillis()),true,16),
+        var liveCommunityPostDataArray:ArrayList<Post> = arrayListOf<Post>(
+            Post(0,"너무 떨린다","수강신청 다들 파이팅", Timestamp(System.currentTimeMillis()),"익명",0),
+            Post(1,"모컴 경쟁률 빡셀까?","모컴 곡 잡아야 하는데...", Timestamp(System.currentTimeMillis()),"익명",0),
+            Post(2,"곧이다 진짜 ;","ㅈㄱㄴ", Timestamp(System.currentTimeMillis()),"익명",1),
+            Post(3,"꿀팁 ㄹㅇ ㅋㅋ","수강신청 전엔 명상이지!", Timestamp(System.currentTimeMillis()),"익명",6),
+            Post(4,"배고프당","점심 뭐 먹지", Timestamp(System.currentTimeMillis()),"익명",5),
+            Post(5,"종강 언제 해","개강부터 해야 할 텐데", Timestamp(System.currentTimeMillis()),"익명",16),
         )
+
+        var liveCommunityPostSummaryDataArray:ArrayList<Post> = liveCommunityPostDataArray.slice(0..2) as ArrayList<Post>
 
         var userArrayList: ArrayList<User> = arrayListOf<User>(
             User("60181645","1234",60181645,"안선영",0,0,"융합소프트웨어학부",
@@ -58,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                     Lecture("인간심리의이해",5269,0,4,0,3,3,"진성조",28,28,134,"화 10:30-11:45(S4112)",)
                 ), arrayListOf(
                 )),
-            User("60181620","1234",60181620,"김민지",0,0,"융합소프트웨어학부",
+            User("60000000","1234",60000000,"오민식",0,0,"융합소프트웨어학부",
                 4,3,3,3,arrayListOf(), arrayListOf()),
         )
         var currentUser: User = User("","",0,"",0,0,"",
@@ -69,17 +71,17 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        val mActionBar = supportActionBar
-//        mActionBar!!.hide()
+        val mActionBar = supportActionBar
+        mActionBar!!.hide()
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 //        테스트용 바로 메인으로 전환
-        currentUser = userArrayList[0]
-        val intent:Intent = Intent(this,MainActivity::class.java).apply {
-            putExtra("stuNum",userArrayList[0].stuNum)}
-        startActivity(intent)
+//        currentUser = userArrayList[0]
+//        val intent:Intent = Intent(this,MainActivity::class.java).apply {
+//            putExtra("stuNum",userArrayList[0].stuNum)}
+//        startActivity(intent)
 
         // 로그인 버튼
         binding.loginBtn.setOnClickListener {

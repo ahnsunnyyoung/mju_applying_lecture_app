@@ -18,7 +18,7 @@
     android:textSize="18sp"
     android:textColor="@color/white"
     android:text="교양필수"
-    android:drawableLeft="@drawable/notice_icon_fit"
+    android:drawableLeft="@drawable/books_icon_fit"
     android:drawableTint="@color/white"
     android:drawablePadding="10dp"/>
 

@@ -30,5 +30,6 @@ class LiveCommunityPostAdapter(
             binding.content.text = post.content
             binding.timestamp.text = sdf.format(post.timestamp)
             binding.like.text = post.likeNum.toString()
+            binding.writer.text = post.writer
         }
 }

@@ -42,13 +42,14 @@
             android:text="@string/info_schedule_btn"
             android:drawableLeft="@drawable/planner_icon_fit"
             android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
             android:paddingHorizontal="50dp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:textSize="12sp"
-            android:backgroundTint="@color/teal_700"
+            android:backgroundTint="@color/teal_500"
             android:gravity="center" />
 
     </LinearLayout>
@@ -99,6 +100,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
                 android:textSize="17sp"
+                android:gravity="left|center"/>
+            <TextView
+                android:id="@+id/info_notice_content"
+                android:text="동시 접속은 불가입니다."
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="16sp"
                 android:gravity="left|center"/>
         </LinearLayout>
 

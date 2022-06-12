@@ -6,11 +6,13 @@
     android:orientation="vertical"
     android:padding="20dp">
     <EditText
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Title"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -22,6 +24,7 @@
         android:orientation="horizontal">
 
         <com.github.angads25.toggle.LabeledSwitch
+            android:id="@+id/isUnknown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
@@ -37,7 +40,7 @@
             android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/community_live_btn"
+            android:id="@+id/community_live_post_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_post_btn"

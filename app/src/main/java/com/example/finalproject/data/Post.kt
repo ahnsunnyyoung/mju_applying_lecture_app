@@ -6,6 +6,6 @@ class Post (val id:Int,
             val title:String,
             val content:String,
             val timestamp: Timestamp,
-            val isUnkown:Boolean,
+            val writer: String,
             val likeNum:Int) {
 }
