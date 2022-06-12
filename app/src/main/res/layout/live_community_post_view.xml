@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -58,18 +59,28 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart_fit"
+                app:tint="@color/gray_500" />
             <TextView
                 android:id="@+id/like"
                 android:layout_gravity="right"
                 android:text="3"
-                android:drawablePadding="5dp"
-                android:drawableLeft="@drawable/heart_fit"
-                android:drawableTint="@color/gray_500"
+                android:paddingLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/lectures_contents"
                 android:textColor="@color/gray_500"
                 android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/like_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="false"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.R
 import com.example.finalproject.data.Post
 import com.example.finalproject.databinding.LiveCommunityPostViewBinding
 import com.example.finalproject.ui.picked.PickedLecturesAdapter
@@ -31,5 +32,16 @@ class LiveCommunityPostAdapter(
             binding.timestamp.text = sdf.format(post.timestamp)
             binding.like.text = post.likeNum.toString()
             binding.writer.text = post.writer
+            binding.likeBtn.setOnClickListener {
+                if (binding.likeStatus.text=="false") {
+                    binding.likeBtn.setImageResource(R.drawable.heart_filled_fit)
+                    binding.likeStatus.text="true"
+                    binding.like.text = (binding.like.text.toString().toInt()+1).toString()
+                }else{
+                    binding.likeBtn.setImageResource(R.drawable.heart_fit)
+                    binding.likeStatus.text="false"
+                    binding.like.text = (binding.like.text.toString().toInt()-1).toString()
+                }
+            }
         }
 }
