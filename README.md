@@ -3,7 +3,7 @@
 <div align="center">
 
   <h3 align="center">Myoungji Lecture Registration Mobile Application</h3>
-  <img src="[images/logo.png](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/bc3a8459-19dc-46ab-a9d2-9fa438fd37cf)" alt="Logo" width="80" height="80">
+  <img src="https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/bc3a8459-19dc-46ab-a9d2-9fa438fd37cf" alt="Logo" width="80" height="80">
 
 </div>
 
