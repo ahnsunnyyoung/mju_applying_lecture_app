@@ -1,10 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-![mju_logo](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/8073bc63-f811-44be-8c3a-862d9b177027)
+  ![image](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/bc3a8459-19dc-46ab-a9d2-9fa438fd37cf)
 
   <h3 align="center">Myoungji Lecture Registration Mobile Application</h3>
 
@@ -33,7 +30,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/df76a098-cd94-4bf3-bb79-5349c4090c63
 
 * Developed Myongji University's class registration Android app.
 * Conducted UX design such as basic problem definition, user research, and UX modeling
@@ -56,7 +52,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- FRONTEND -->
 ## Frontend
 
-![login](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/a3a5b046-ea68-4846-82d1-38d1889c43b3)
 ![info](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/9181cd97-75ea-4fa8-bcbc-643d0cb06992)
 ![lectures](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/db4f01ed-4ad5-4be8-a5f8-522bf1347b6f)
 ![myLectures](https://github.com/ahnsunnyyoung/mju_applying_lecture_app/assets/46989965/b5ac264d-b802-4c71-91db-d6d84ed6b7c9)
